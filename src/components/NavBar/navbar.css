@@ -1,0 +1,77 @@
+/* Default styles for larger screens */
+.navbar {
+   background: rgb(77, 22, 150);
+   height: 5rem;
+   width: 100vw;
+   max-width: 75rem;
+   margin: 0 auto;
+   padding: 1rem 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: sticky;
+   top: 0;
+   z-index: 3;
+}
+
+.logo {
+    object-fit: cover;
+    height: 5rem;
+    width: 22rem;
+    cursor: pointer;
+}
+
+.desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.desktopMenuListItem::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(0,0,20);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease, width 0.5s ease, opacity 0.5s ease;
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+.desktopMenuListItem:hover::before {
+    width: 100%;
+    transform: scaleY(1);
+    opacity: 2;
+    
+}
+
+.desktopMenuListItem:hover {
+    color: rgb(0, 0, 20);
+    padding-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(97, 1, 187,);
+}
+
+.desktopMenuBtn {
+    background: white;
+    color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 2rem;
+}
+
+.desktopMenuImg {
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin: 1rem;
+}
+
+
+

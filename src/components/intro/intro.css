@@ -1,0 +1,106 @@
+
+
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+
+
+.introContent {
+    height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bg {
+    position: absolute;
+    top: 2rem;
+    right: 0; 
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+} 
+
+.ola {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: rgb(77, 22, 150);
+}
+
+.introName:hover {
+    color: rgb(97, 1, 187);
+}
+
+.introParagrafo {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.introText {
+    font-size: 3rem;
+}
+
+.btn {
+    background: rgb(77, 22, 150);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.btn:hover {
+    background: rgb(96, 2, 184);
+}
+
+.btnImg {
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .introText {
+        font-size: 2rem;
+        
+    }
+
+    .introParagrafo{
+        font-weight: 500;
+        color: aliceblue;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .introParagrafo{
+        font-weight: 500;
+        color: aliceblue;
+        font-size: 0.75;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    .introParagrafo{
+        font-weight: 500;
+        color: aliceblue;
+        font-size: 0.75;
+    }
+
+}
+
