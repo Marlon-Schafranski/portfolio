@@ -35,17 +35,18 @@
 }
 
 .introName {
-    color: rgb(77, 22, 150);
-}
-
-.introName:hover {
-    color: rgb(97, 1, 187);
+    background: linear-gradient(90deg, #7541cf 0%, #01a7d4 90%);
+      -webkit-background-clip: text; 
+      color: transparent;  
 }
 
 .introParagrafo {
     font-size: medium;
     font-weight: 300;
     letter-spacing: 1px;
+    letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
+    color: #f6fbff; /* Cor do texto */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
 }
 
 .introText {
@@ -53,7 +54,7 @@
 }
 
 .btn {
-    background: rgb(77, 22, 150);
+    background: linear-gradient(90deg, #0189af 10%, #01a7d4 90%);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -61,7 +62,7 @@
 }
 
 .btn:hover {
-    background: rgb(96, 2, 184);
+    background: linear-gradient(90deg,#01a7d4   10%, #0189af 90%);
 }
 
 .btnImg {
@@ -104,3 +105,9 @@
 
 }
 
+@media screen and (min-width: 300px) {
+    .bg{
+    height: 100vh;
+    
+    }
+}

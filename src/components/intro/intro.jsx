@@ -13,7 +13,7 @@ const Intro = () => {
                  Marlon Schafranski</span> <br /> Desenvolvedor Web </span>  
 
             <p className='introParagrafo'>  Uma mistura de conhecimento, porem ainda não profissional <br />
-            em React para o desenvolvimento front-end e Spring <br />
+            em React e Angular para o desenvolvimento front-end e Spring <br />
              para o back-end.
             </p>
             <Link><button className='btn'><img src={btnImg} alt='Contrate-me' className='btnImg' ></img> Contrate-me</button></Link>

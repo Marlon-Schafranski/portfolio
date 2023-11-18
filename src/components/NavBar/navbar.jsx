@@ -12,6 +12,7 @@ export const Navbar = () => {
         <b>
         <Link className="desktopMenuListItem" > Ínicio </Link>
         <Link className="desktopMenuListItem" > Sobre mim </Link>
+        <Link className="desktopMenuListItem" > Interesses </Link>
         <Link className="desktopMenuListItem" > Conhecimentos </Link>
         <Link className="desktopMenuListItem" > Projetos </Link>        
         </b>

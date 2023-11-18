@@ -10,21 +10,6 @@
     margin: 0 auto;
 }
 
-.skillTitle {
-    font-size: 3rem;
-    font-weight: 700;
-    padding-top: 4rem;
-    margin-bottom: 1.5rem;
-
-}
-
-.skillDescription{
-    font-size: 1.05rem;
-    font-weight: 500;
-    max-width: 51rem;
-    padding: 0 2rem;
-
-}
 
 .skillBars{
     margin: 1.5rem;
@@ -33,6 +18,21 @@
     text-align: left;
 }
 
+
+.skillTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+     text-transform: uppercase; /* Transforma o texto para maiúsculas */
+    letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
+    color: #3498db; /* Cor do texto */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+   
+
+}
+
+
 .skillBarReact {
     display: flex;
     margin: 1rem;
@@ -40,17 +40,24 @@
     border-radius: 0.5rem;
     background: linear-gradient(90deg, #4e2a8e 0%, #007ea1 90%); 
     border: 2px solid #007ea1; 
-    color: #fff; 
-
-   
+    color: #fff;  
+    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skillBarReact:hover {
     background: linear-gradient(90deg, #007ea1 0%, #4e2a8e 90%); 
     box-shadow: 0 0 20px rgba(133, 181, 253, 0.322); 
+    color: rgb(33, 248, 248);
     
 }
+
+
+.titleReact{
+    color: #00e1ff;
+}
+
 
 .skillBarSpring {
     
@@ -58,19 +65,49 @@
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: linear-gradient(90deg, #4e2a8e 0%, #00a199 100%);
+    background: linear-gradient(90deg, #4e2a8e 0%, #01c9bf 100%);
     border: 2px solid #5a9367; 
     color: #fff; 
+    letter-spacing: 1px; 
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 
-   
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skillBarSpring:hover {
-    background: linear-gradient(90deg, #5a9367 0%, #4e2a8e 100%); 
+    background: linear-gradient(90deg, #01928b 0%, #4e2a8e 100%); 
     box-shadow: 0 0 20px rgba(42, 142, 50, 0.432); 
-    
+    color:#31fc52;
 }
+
+.titleSpring{
+    color: #01e026;
+}
+
+.skillBarAngular {
+    
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, #4e2a8e 0%, #b40225 100%);
+    border: 2px solid #935a5a; 
+    color: #fff; 
+    letter-spacing: 1.5px; 
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillBarAngular:hover {background: linear-gradient(90deg, #b40225 0%, #5a31a1 100%); 
+    box-shadow: 0 0 20px rgba(142, 42, 42, 0.432); 
+    color:#ff0f0f;
+}
+
+.titleAngular{
+    color: #ff0f0f;
+}
+
 
 
 .skillBarImg {
@@ -87,8 +124,6 @@
 }
 
 
-
-
 @media screen and (max-width: 500px) {
     .skillBarText{
         font-size: 0.75rem ;
@@ -100,7 +135,57 @@
         margin-bottom: 0.5rem;
     }
     .skillBarReact,
+    .skillBarAngular,
     .skillBarSpring{
-        margin: 0.25rem;
+        margin: 0.1rem;
+        padding: 1rem;
+        max-width: 100rem
+
     }
 }
+
+@media screen and (max-width: 700px) {
+    .skillBarText{
+        font-size: 0.75rem ;
+    }
+    .skillBarImg{
+        height: 4rem;
+        width: 4rem;
+        margin-right: 0.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .skillBarReact,
+    .skillBarAngular,
+    .skillBarSpring{
+        margin: 0.1rem;
+        padding: 1rem;
+        max-width: 100rem
+
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .skillBarText{
+        font-size: 0.75rem ;
+    }
+    .skillBarImg{
+        height: 4rem;
+        width: 4rem;
+        margin-right: 0.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .skillBarReact,
+    .skillBarAngular,
+    .skillBarSpring{
+        margin: 0.1rem;
+        padding: 1rem;
+        max-width: 100rem
+
+    }
+}
+
+
+
+
+

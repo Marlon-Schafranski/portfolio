@@ -1,0 +1,62 @@
+#about{
+    overflow: hidden;
+    width: 100vW;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.aboutBox{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 7rem;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, #4e2a8e 0%, #007ea1 90%);
+    border: 2px solid #007ea1;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.aboutBox:hover{
+    background: linear-gradient(90deg, #007ea1 0%, #4e2a8e 90%); 
+    box-shadow: 0 0 20px rgba(133, 181, 253, 0.322); 
+    color: rgb(33, 248, 248);
+    
+  
+}
+
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 4rem;
+    margin-bottom: 2.5rem;
+     text-transform: uppercase; /* Transforma o texto para maiúsculas */
+    letter-spacing: 6px; /* Adiciona espaçamento entre as letras */
+    color: #3498db; /* Cor do texto */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+   
+
+}
+
+
+
+.aboutDescription{
+    font-size: 1.05rem;
+    font-weight: 500;
+    max-width: 51rem;
+    padding: 0 2rem;
+    text-transform: lupperrcase; /* Transforma o texto para maiúsculas */
+    letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
+    color: #fafdff; /* Cor do texto */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
+
+}

@@ -1,6 +1,6 @@
 /* Default styles for larger screens */
 .navbar {
-   background: rgb(77, 22, 150);
+   background:  linear-gradient(90deg, #4e2a8e 0%, #007ea1 90%);;
    height: 5rem;
    width: 100vw;
    max-width: 75rem;
@@ -18,7 +18,7 @@
     object-fit: cover;
     height: 5rem;
     width: 22rem;
-    cursor: pointer;
+    
 }
 
 .desktopMenuListItem {
