@@ -27,7 +27,7 @@
 
 
 .aboutBox:hover{
-    background: linear-gradient(90deg, #007ea1 0%, #4e2a8e 90%); 
+    background: linear-gradient(50deg, #007ea1 0%, #4e2a8e 90%); 
     box-shadow: 0 0 20px rgba(133, 181, 253, 0.322); 
     color: rgb(33, 248, 248);
     
