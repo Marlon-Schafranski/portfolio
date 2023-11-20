@@ -5,8 +5,8 @@ import js from "../../assets/logo-javascript-1024.png";
 import ts from "../../assets/Typescript_logo_2020.svg.png";
 import tailwind from "../../assets/tailwind-css-logo-5AD4175897-seeklogo.com.png";
 import react from "../../assets/front.png";
+import angular from "../../assets/angular.png";
 import java from "../../assets/JAVA.png";
-
 import spring from "../../assets/spring-3-logo-png-transparent.png";
 
 const Know = () => {
@@ -17,6 +17,7 @@ const Know = () => {
       description:
         "HTML (HyperText Markup Language) é a linguagem de marcação fundamental para a criação de páginas web, estruturando o conteúdo por meio de tags que definem elementos como títulos, parágrafos e links.",
     },
+  
     {
       title: "Css",
       image: css,
@@ -50,6 +51,14 @@ const Know = () => {
       description:
         "React é uma linguagem de programação orientada a objetos, que é uma das linguagens mais utilizadas no mundo atual.",
     },
+
+    {
+      title: "Angular",
+      image: angular,
+      description:"O Angular é um poderoso framework JavaScript utilizado para desenvolvimento de aplicações web dinâmicas. Com sua arquitetura baseada em componentes, facilita a criação de interfaces interativas e responsivas, proporcionando uma experiência de usuário moderna e eficiente."
+
+    },
+
     {
       title: "java",
       image: java,
@@ -69,8 +78,7 @@ const Know = () => {
     <section id="know">
       <h2 className="knowTitle">Conhecimentos</h2>
       <span className="knowDesc">
-        Alguns frameworks e linguens que eu tenho conhecimento e foco para
-        aprender mais.
+        Passe o mouse para poder ler
       </span>
 
       <div className="knowCard">
@@ -79,6 +87,7 @@ const Know = () => {
             <div className="img-box">
               <img src={knowledge.image} alt={knowledge.title} />
             </div>
+
             <div className="content">
               <h2>{knowledge.title}</h2>
               <p>{knowledge.description}</p>

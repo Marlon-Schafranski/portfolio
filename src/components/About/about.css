@@ -39,9 +39,9 @@
     font-weight: 700;
     padding-top: 4rem;
     margin-bottom: 2.5rem;
-     text-transform: uppercase; /* Transforma o texto para maiúsculas */
-    letter-spacing: 6px; /* Adiciona espaçamento entre as letras */
-    color: #3498db; /* Cor do texto */
+     text-transform: uppercase; 
+    letter-spacing: 6px; 
+    color: #3498db; 
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
    
 
@@ -54,9 +54,10 @@
     font-weight: 500;
     max-width: 51rem;
     padding: 0 2rem;
-    text-transform: lupperrcase; /* Transforma o texto para maiúsculas */
-    letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
-    color: #fafdff; /* Cor do texto */
+    letter-spacing: 2px; 
+    color: #fafdff; 
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
 
 }
+
+
