@@ -1,110 +1,114 @@
-import { useState, useEffect, useRef} from 'react'
+import "./swiper.css";
+import { useState, useEffect} from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import "./project.css";
-import { motion } from "framer-motion";
-import filme from "../../assets/image/film.png"
-import contas from "../../assets/image/conta3.png"
-import picPay from "../../assets/image/picpay2.png"
-import registro from "../../assets/image/registro.png"
-import crud from "../../assets/image/Construcao.png"
-import picPayFront from "../../assets/image/picfront.png"
+import { register } from "swiper/element/bundle";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import 'swiper/css/effect-fade'
+register();
 
 const Project = () => {
-  const carousel = useRef();
-
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
-  }, [])
-
-
-  
-                        
-
-
-
-  
-  const projectData = [
+  const [slidePerView, setSlidePerView] = useState(2)
+  const swiperData = [
     {
       title: "Aplicativo de filmes",
-      image : filme,
-      describe: "Aplicatico mobile de filmes desenvolvido em Ionic",
-      links: ['https://github.com/Marlon-Schafranski/AppFilme']
+
+      describe: "Aplicativo de filmes utilizando API desenvolvido em Ionic.",
+      links: ["https://github.com/Marlon-Schafranski/AppFilme"],
+    },
+    {
+      title: "Bills-to-Pay",
+
+      describe:
+        "Aplicativo intuitivo de pagar e receber. Desenvolvido em Angular e Firebase.",
+      links: "https://github.com/Marlon-Schafranski/Contas-a-pagar-e-receber",
+    },
+    {
+      title: "Pic Pay Simplificado (Back-End)",
+
+      describe:
+        "Primeira parte do projeto do Desafio do Pic Pay Simplificado (Back-End)  , desenvolvido em Spring e o Insomnia para disparações das API's. ",
+      links: [
+        "https://github.com/Marlon-Schafranski/Pic-Pay-Simplificado-Back-end",
+      ],
+    },
+    {
+      title: "Pic Pay Simplificado (Front-End), ",
+
+      describe:
+        "Segunda parte do Desafio do Pic Pay Simplificado, desenvolvido em React *ainda em construção*",
       
-
-    },
-    {
-      title: "Contas a Pagar e Receber",
-      image : contas,
-      describe:
-        "Aplicativo de Contas a pagar e receber desenvolvido em Angular e Firebase",
-        links: 'https://github.com/Marlon-Schafranski/Contas-a-pagar-e-receber'
-    },
-    {
-      title: "Pic Pay Simplificado",
-      image : picPay,
-      describe:
-        "Desafio do Pic Pay Simplificado desenvolvido em React Spring",
-        links: ['https://github.com/Marlon-Schafranski/Pic-Pay-Simplificado-Back-end']
-    },
-    {
-      title: "Pic Pay Simplificado",
-      image : picPayFront,
-      describe:
-        "Desafio do Pic Pay Simplificado desenvolvido em React Spring",
-        links: ['https://github.com/Marlon-Schafranski/pic-pay-simplificado-front-end-main']
+      links: [
+        "https://github.com/Marlon-Schafranski/pic-pay-simplificado-front-end-main",
+      ],
     },
 
-    {
-      title: "Aplicativo de registro",
-      describe: "Essa aplicação mobile foi desenvolvida em Ionic",
-      image : registro,
-      links: ['https://github.com/Marlon-Schafranski/Resgistro-de-Computadores']
-    },
     {
       title: "Projeto full stack CRUD (React e Spring)",
-      image : crud,
-      describe: "PROJETO EM CONSTRUÇÃO",
-      links: ['/']
+
+      describe:
+        "PROJETO EM CONSTRUÇÃO  (aguarde pegue um café, o projeto logo estará dispovivel!!! )",
+      links: ["/"],
     },
   ];
 
-  return (
+  useEffect(() =>  {
+    function handleResize(){
+      if (window.innerWidth < 720) {
+        setSlidePerView(1)
+      }else{
+        setSlidePerView(2)
+      }
+    }  
     
-      <div className="projectText">
-      <div className="projectTextPara">
-        <h2 className='projectTitle' >Meus Projetos</h2>
-        <span className='projectDesc'> Meus projeto desenvolvidos ate este momento </span>
-        <span className='ProjectDesNotice'> *Os projeto sempre estaram sendo atualizado* </span>
+    handleResize()
 
+    window.addEventListener('resize',handleResize)
+
+
+    return() => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []);
+
+  return (
+    <div className="projectText">
+      <div className="projectTextPara">
+        <h2 className="projectTitle">Meus Projetos</h2>
+        <span className="projectDesc">
+          {" "}
+          Meus projeto desenvolvidos ate este momento{" "}
+        </span>
+        <span className="ProjectDesNotice">
+          {" "}
+          *Os projeto sempre estaram sendo atualizado*{" "}
+        </span>
       </div>
 
-
-    <div className="project">
-      <motion.div ref={carousel} className="carousel" whileTap={{ cursor: "grabbing" }} >
-        <motion.div className="inner"
-        drag="x"
-        dragConstraints={{right: 0, left: -width}}
-        initial={{x: 100}}
-        animate={{x: 0}}
-        transition={{ duration: 0.8}}
+      <Swiper
+        slidesPerView={slidePerView}
+        pagination={{ clickable: true}}
+        navigation
+        className="swiper"
         >
-          {projectData.map((textSlider) => (
-            <motion.div className="item" key={textSlider.title}>
-              <h2 className='title' >{textSlider.title}</h2>
-              <p className='paragrafo' >{textSlider.describe}</p>
-              <img src={textSlider.image} alt="" />
-              <a href={textSlider.links} className='view' >Vizualizar projeto</a>
-            </motion.div>
+
+
+    
+          {swiperData.map((item) => (
+            <SwiperSlide key={item.id} className="slide-item" >
             
+              <h2 >{item.title}</h2>
+              <p >{item.describe}</p>
+              <a  href={item.links}>Acesse o projeto no GitHub</a>
+
+            </SwiperSlide>
           ))}
-          
-        </motion.div>
-      </motion.div>
-      
-    </div>
+       
+      </Swiper>
     </div>
   );
 };
