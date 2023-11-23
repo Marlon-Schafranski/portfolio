@@ -5,6 +5,8 @@ import Intro from "./components/intro/intro";
 import Project from "./components/project/Project";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
+import Footer from "./footer/footer";
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <Know/>
       <Project/>
       <Contact />
+      <Footer />
      
 
       

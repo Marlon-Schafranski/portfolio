@@ -76,6 +76,7 @@ const Project = () => {
   }, []);
 
   return (
+    <div id="project">
     <div className="projectText">
       <div className="projectTextPara">
         <h2 className="projectTitle">Meus Projetos</h2>
@@ -109,6 +110,7 @@ const Project = () => {
           ))}
        
       </Swiper>
+    </div>
     </div>
   );
 };

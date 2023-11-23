@@ -46,7 +46,7 @@ const Contact = () => {
     {
       platform: 'Facebook',
       image: facebook,
-      link: 'https://www.facebook.com/Marlon-Schafranski ',
+      link: 'https://www.facebook.com/profile.php?id=100082685932561',
     },
     {
       platform: 'Instagram',
@@ -56,7 +56,7 @@ const Contact = () => {
     {
       platform: 'LinkedIn',
       image: linkedin,
-      link: 'https://www.linkedin.com/in/Marlon-Schafranski',
+      link: 'https://www.linkedin.com/in/marlon-schafranski-b48882282/',
     },
     {
       platform: 'WhatsApp',
@@ -71,7 +71,7 @@ const Contact = () => {
   ];
 
   return (
-    <div>
+    <div id="contact">
       <ScrollToTop smooth top='20' />
       <div className="container">
         <h1 className="title">Contato</h1>
