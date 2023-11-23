@@ -16,9 +16,19 @@
 
 .logo {
     object-fit: cover;
+    height: 16rem; 
+    width: 26rem; 
+    object-fit: cover;
+    
+}
+
+.logoMob{
+    object-fit: cover;
     height: 8rem; 
     width: 8rem; 
     object-fit: cover;
+    display: none;
+
 }
 
 .desktopMenuListItem {
@@ -84,6 +94,7 @@
   display: none;
   object-fit: cover;
   height: 1.8rem;
+  color: #007ea1;
   }
 
 .navMenu {
@@ -108,8 +119,10 @@
     cursor: pointer;
     margin: 0.25rem;
 }
+    
 
-@media screen and (max-width: 926px){
+
+@media screen and (max-width: 1221px){
     .mobMenu{
         display: flex;
 
@@ -122,20 +135,24 @@
     .desktopMenuBtn{
         display: none;
     }
+    .logoMob{
+        display: flex;
+    } 
+    .logo{
+        display: none;
+    }
     
 }
 
-@media screen and (max-width: 926px){
+@media screen and (min-width: 926px){
     .navbar{
-        max-width: 99rem;
+        max-width: 100rem;
+
     }
-   
 }
 
-@media screen and (max-width: 400px){
-    .navbar{
-        max-width: 25rem;
-    }
-   
+@media screen and (min-width: 2550px){
+   .logoMob{
+    display: none;
+   }
 }
-
