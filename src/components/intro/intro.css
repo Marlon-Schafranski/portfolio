@@ -23,11 +23,13 @@
 .bg {
     position: absolute;
     top: 2rem;
-    right: 0; 
+    right: 0;
     z-index: -1;
-    object-fit: cover;
-    height: 100vh;
-} 
+    object-fit: cover; /* or try 'contain' or 'fill' */
+    height: 60vh; /* Adjust the height based on your preference */
+}
+
+
 
 .ola {
     font-size: 1.75rem;
